@@ -34,7 +34,7 @@ BACKOFF_SECONDS = 5          # doubles after each failed attempt
 TIMEOUT = (10, 300)          # (connect, read) seconds
 LOOKBACK_MONTHS = 12         # how far back to search for published months
 EXPECTED_COLUMNS = Path(__file__).parent / "expected_columns.json"  # schema baseline for rule 1
-VOLUME_THRESHOLD = 0.20      # rule 2: max deviation from the median; calibrate after the first run
+VOLUME_THRESHOLD = 0.15      # rule 2: max deviation from the median; calibrate after the first run
 
 log = logging.getLogger("download_bts")
 
