@@ -39,7 +39,7 @@ flowchart LR
 - Raw files stored in S3 (`raw/year=YYYY/month=MM/`) so any month can be reprocessed from source
 - `tests/test_rules.py`: 11 checks using deliberately broken copies of a real file
 
-### 2. Standardization (Python, `etl/standardize.py`)
+### 2. Standardization (Python, `etl/Standardize.py`)
 - Selects 49 columns with explicit types (times kept as text to preserve leading zeros) and adds a `source_file` lineage column
 - Writes partitioned Parquet, about 15x smaller than the CSV (15–19 MB vs ~265 MB per month)
 - Checks the row count against the manifest before uploading to S3
